@@ -11,7 +11,7 @@ export default function Footer() {
         <Link href="https://t.me/user1name_123"><Send className="hover:text-indigo-500 cp transition-all duration-500 scale-75 hover:scale-100"/></Link>
       </div>
       <p className="text-sm opacity-70">
-        Built with Next.js and Tailwind CSS
+        Built with 🤍 by Yamlak Negash
       </p>
       <p className="text-sm opacity-70">
         © {new Date().getFullYear()} All rights reserved
