@@ -13,7 +13,7 @@ export default function Navbar() {
       </div>
       <div className="flex gap-6 items-center">
         <Link href="/projects" className="cp">Projects</Link>
-        <Link href="/admin" className="cp">Admin</Link>
+        <Link href="/skills" className="cp">Skills</Link>
         <ThemeToggle />
       </div>
     </nav>
