@@ -3,6 +3,17 @@
 import { useEffect, useState } from "react";
 import { useSkillStore } from "@/store/useSkillStore";
 
+const demoSkills = [
+  { id: '1', name: 'React', level: 'intermediate', category: 'Frontend' },
+  { id: '2', name: 'Next.js', level: 'advanced', category: 'Frontend' },
+  { id: '3', name: 'Node.js', level: 'intermediate', category: 'Backend' },
+  { id: '4', name: 'MongoDB', level: 'intermediate', category: 'Database' },
+  { id: '5', name: 'TypeScript', level: 'advanced', category: 'Language' },
+  { id: '6', name: 'Tailwind CSS', level: 'advanced', category: 'Frontend' }
+];
+
+localStorage.setItem('skills', JSON.stringify(demoSkills));
+
 export default function SkillsPage() {
   const { skills, fetchSkills, addSkill, loading } = useSkillStore();
   const [newSkill, setNewSkill] = useState("");
@@ -42,9 +53,9 @@ export default function SkillsPage() {
         <p className="text-gray-500">No skills added yet.</p>
       ) : (
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {skills.map((skill) => (
+          {demoSkills.map((skill) => (
             <li
-              key={skill._id}
+              key={skill.id}
               className="border p-4 rounded flex justify-between items-center"
             >
               <span>{skill.name}</span>
