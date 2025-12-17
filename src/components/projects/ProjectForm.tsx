@@ -6,12 +6,16 @@ import { ProjectService } from "@/services/project.service";
 export default function ProjectForm() {
   const [title, setTitle] = useState("");
 
-  const submit = async () => {
-    await ProjectService.create({
+  const data = { 
       title,
       description: "Description",
       imageUrl: "",
-      techStack: []
+      featured: false,
+      techStack: [] };
+
+  const submit = async () => {
+    await ProjectService.create({
+      ...data
     });
   };
 
